@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Harsh Rai — Entry-level Data Analyst / MIS Executive (Reporting & Dashboards) with Excel, Power BI, SQL, and Python skills." />
+  <title>Harsh Rai | Data Analyst / MIS Executive Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--bg:#F8FAFC;--text:#000;--muted:#000;--card:rgba(255,255,255,.82);--cb:rgba(17,24,39,.12);--accent:#006b6a;--accent2:rgba(14,165,163,.12);--btn:#074bde;color-scheme:light}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text)}
+
+    /* Glass — removed backdrop-filter from cards (major perf killer), kept visual similarity */
+    .glass{background:var(--card);border:1px solid var(--cb);box-shadow:0 4px 24px rgba(15,23,42,.07)}
+
+    .focus-ring:focus{outline:none;box-shadow:0 0 0 4px var(--accent2)}
+
+    /* Buttons — removed will-change (was promoting too many layers) */
+    .btn{transition:transform .2s,box-shadow .2s,background-color .2s,border-color .2s}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 0 0 3px var(--accent2),0 4px 12px rgba(0,0,0,.05);border-color:var(--accent)}
+    .btn:active{transform:translateY(0);box-shadow:none}
+
+    section{scroll-margin-top:80px}
+
+    /* Background — static gradient only, removed expensive SVG noise overlay */
+    .aurora-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(900px 560px at 18% 10%,rgba(14,165,163,.12),transparent 62%),radial-gradient(900px 560px at 85% 12%,rgba(15,118,110,.08),transparent 60%),linear-gradient(180deg,#fff 0%,var(--bg) 55%,#eef5f7 100%);will-change:auto}
+
+    /* Navbar — only blur element on the page, contained to thin strip */
+    .nav-blur{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+
+    .nav-link{position:relative;display:inline-flex;align-items:center;height:40px;padding:0 12px;border-radius:12px;transition:background .18s,color .18s}
+    .nav-link:hover{background:var(--accent2);color:var(--text)}
+    .nav-link[aria-current="true"]{background:transparent;border:1px solid transparent;color:inherit}
+
+    .muted{color:var(--muted)}
+    .chip{padding:4px 12px;border-radius:9999px;font-size:.75rem;border:1px solid var(--cb)}
+    .chip-card{background:var(--card)}
+    .chip-bg{background:rgba(248,250,252,.2)}
+    .chip-accent{background:var(--accent2)}
+    .sec{margin:0 auto;max-width:72rem;padding:2.5rem 1rem}
+    .ico-btn{display:inline-flex;height:2.25rem;width:2.25rem;align-items:center;justify-content:center;border-radius:.75rem;border:1px solid var(--cb);background:var(--card);transition:background .18s}
+    .ico-btn:hover{background:var(--accent2)}
+    .contact-icon{display:inline-flex;height:2.5rem;width:2.5rem;align-items:center;justify-content:center;border-radius:.75rem;background:var(--accent2);border:1px solid var(--cb)}
+    .inner-card{border-radius:1rem;border:1px solid var(--cb);background:rgba(248,250,252,.2);padding:1rem}
+    @media(min-width:640px){.sec{padding:2.5rem 1.5rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body class="min-h-full">
+  <div class="aurora-bg"></div>
+  <a href="#home" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-[var(--card)] focus:border focus:border-[var(--cb)] focus-ring">Skip to content</a>
+
+  <header class="sticky top-0 z-50">
+    <div class="nav-blur bg-[color:var(--bg)]/70 border-b border-[color:var(--cb)]">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#home" class="flex items-center gap-2 font-semibold tracking-tight">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[color:var(--cb)]">
+              <span class="text-[color:var(--accent)] font-bold">HR</span>
+            </span>
+            <span class="hidden sm:inline">Harsh Rai</span>
+          </a>
+          <nav id="desktopNav" class="hidden md:flex items-center gap-6 text-sm"></nav>
+          <button id="mobileMenuBtn" type="button" class="md:hidden focus-ring inline-flex items-center justify-center h-10 w-10 rounded-xl border border-[color:var(--cb)] bg-transparent" aria-label="Open menu" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden pb-4">
+          <div class="glass rounded-2xl p-3">
+            <nav id="mobileNav" class="grid gap-1 text-sm"></nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="sec pt-10 sm:pt-14 pb-10">
+      <div class="grid gap-6 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 rounded-full border border-[color:var(--cb)] bg-[color:var(--card)] px-4 py-2 text-xs sm:text-sm">
+            <span class="h-2 w-2 rounded-full bg-[color:var(--accent)]"></span>
+            <span class="muted">Available for opportunities</span>
+          </div>
+          <h1 class="mt-5 text-3xl sm:text-5xl font-semibold tracking-tight leading-tight">Harsh Rai</h1>
+          <p class="mt-3 text-base sm:text-lg font-medium text-[color:var(--accent)]">Entry-level Data Analyst / MIS Executive (Reporting & Dashboards)</p>
+          <p class="mt-4 text-base sm:text-lg muted max-w-2xl">Passionate B.Com (Hons.) graduate specializing in transforming raw data into actionable insights. Eager to leverage strong Excel, Power BI, and foundational SQL skills to create precise MIS reports and impactful dashboards that drive informed business decisions.</p>
+          <div class="mt-7 flex flex-col sm:flex-row gap-3">
+            <!-- HERE YOU CAN ADD RESUME FILE WHICH STAYS IN YOUR ASSETS FILE-->
+            <a href="assets/resume.pdf" download class="btn focus-ring inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium bg-[color:var(--btn)] text-white shadow-sm">Download Resume</a>
+            <a href="#contact" class="btn focus-ring inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium border border-[color:var(--cb)] bg-[color:var(--card)]">Contact</a>
+          </div>
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-xl">
+            <div class="glass rounded-2xl p-4"><p class="text-xs muted">Location</p><p class="mt-1 font-semibold">Ludhiana, Punjab</p></div>
+            <div class="glass rounded-2xl p-4"><p class="text-xs muted">Role Target</p><p class="mt-1 font-semibold">Entry-level Data Analyst / MIS Executive</p></div>
+            <div class="glass rounded-2xl p-4"><p class="text-xs muted">Tools</p><p class="mt-1 font-semibold">Excel • Power BI • SQL (Basic) • Python (Basic) • IBM Cognos</p></div>
+          </div>
+          <div class="mt-4 max-w-xl rounded-3xl glass p-5">
+            <p class="text-sm font-semibold">Recruiter Snapshot</p>
+            <ul class="mt-3 grid gap-2 text-sm muted" id="snapshotList"></ul>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="glass rounded-3xl p-6 sm:p-7">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-sm muted">Profile Snapshot</p>
+                <p class="mt-1 text-xl font-semibold">Entry-level Data Analyst / MIS Executive</p>
+              </div>
+              <span class="inline-flex items-center rounded-full border border-[color:var(--cb)] bg-[color:var(--card)] px-3 py-1 text-xs text-[color:var(--accent)]"><b>Excel • Power BI • SQL</b></span>
+            </div>
+            <div class="mt-6 space-y-4" id="profileCards"></div>
+            <div class="mt-6 flex items-center justify-between gap-3">
+              <a href="#contact" class="text-sm font-medium text-[color:var(--accent)] hover:underline">Get in touch</a>
+              <div class="flex items-center gap-2 text-xs muted">
+                <span class="h-2 w-2 rounded-full bg-emerald-400"></span>Open to roles
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="sec py-10">
+      <div class="glass rounded-3xl p-6 sm:p-10">
+        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+          <div class="max-w-2xl">
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">About</h2>
+            <p class="mt-4 muted leading-relaxed">An analytical B.Com (Hons.) graduate with practical experience in data analysis, MIS reporting, and dashboard creation. I transform complex datasets into clear, actionable insights using tools like Excel and Power BI, aiming to support strategic business decisions and enhance operational efficiency.</p>
+            <div class="mt-5 inline-flex items-center gap-2 rounded-2xl border border-[color:var(--cb)] bg-[color:var(--bg)]/20 px-4 py-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5 text-[color:var(--accent)]"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-6-4.35-6-10a6 6 0 1 1 12 0c0 5.65-6 10-6 10Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 11.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+              <span class="text-sm">Ludhiana, Punjab</span>
+            </div>
+          </div>
+          <div class="w-full lg:max-w-sm">
+            <div class="rounded-3xl border border-[color:var(--cb)] bg-[color:var(--bg)]/20 p-6">
+              <p class="text-sm font-medium">Recruiter keywords</p>
+              <p class="mt-2 text-xs muted">These are the core areas I'm trained and project-ready in.</p>
+              <p class="mt-2 text-xs muted">Core areas of expertise and project readiness.</p>
+              <div class="mt-4 flex flex-wrap gap-2" id="keywords"></div>
+            </div>
+            <div class="mt-4 rounded-3xl border border-[color:var(--cb)] bg-[color:var(--bg)]/20 p-6">
+              <p class="text-sm font-medium">Education</p>
+              <p class="mt-2 text-sm muted">B.Com (Hons.) — (I.K.G Punjab Technical University - 2025)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="sec py-10">
+      <div class="grid gap-6">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Skills</h2>
+          <p class="mt-2 muted">Core competencies, tools, and strengths that support reliable decision-making.</p>
+        </div>
+        <div class="grid gap-6 lg:grid-cols-3" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="sec py-10">
+      <div class="flex items-end justify-between gap-4 flex-wrap">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Projects</h2>
+          <p class="mt-2 muted">Recruiter-friendly project highlights with scope, metrics, and tools.</p>
+        </div>
+        <a href="#home" class="text-sm font-medium text-[color:var(--accent)] hover:underline">Request resume / details</a>
+      </div>
+      <div class="mt-6 grid gap-6 md:grid-cols-2" id="projectsGrid"></div>
+    </section>
+
+    <section id="certifications" class="sec py-10">
+      <div class="glass rounded-3xl p-6 sm:p-10">
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Certifications</h2>
+            <p class="mt-2 muted">Organized by category for quick scanning.</p>
+          </div>
+          <div class="text-xs muted">Updated: 2025</div>
+        </div>
+        <div class="mt-6 grid gap-5 lg:grid-cols-2" id="certsGrid"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="sec py-10 pb-14">
+      <div class="grid gap-6 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Contact</h2>
+          <p class="mt-2 muted">Connect with me for entry-level Data Analyst / MIS Executive opportunities focused on reporting and dashboards.</p>
+          <div class="mt-6 space-y-3">
+            <a class="glass rounded-2xl p-4 flex items-center gap-3 hover:shadow-md transition-shadow" href="mailto:raih364s@gmail.com">
+              <span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5 text-[color:var(--accent)]"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4V4Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m4 6 8 6 8-6"/></svg></span>
+              <div><p class="text-sm font-medium">Email</p><p class="text-sm muted">raih364s@gmail.com</p></div>
+            </a>
+            <a class="glass rounded-2xl p-4 flex items-center gap-3 hover:shadow-md transition-shadow" href="tel:+916280974688">
+              <span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5 text-[color:var(--accent)]"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.31 1.7.57 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.14a2 2 0 0 1 2.11-.45c.8.26 1.64.45 2.5.57A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <div><p class="text-sm font-medium">Phone</p><p class="text-sm muted">+91-6280974688</p></div>
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="glass rounded-3xl p-6 sm:p-8">
+            <div class="flex items-center justify-between gap-3 flex-wrap">
+              <div><p class="text-sm font-medium">Socials</p><p class="text-sm muted mt-1">LinkedIn, Portfolio (placeholders)</p></div>
+              <a href="https://www.linkedin.com/in/harsh-rai-364-/" target="_blank" class="btn focus-ring inline-flex items-center gap-2 rounded-xl border border-[color:var(--cb)] bg-[color:var(--bg)]/20 px-4 py-2 text-sm" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4 text-[color:var(--accent)]"><path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v2a4 4 0 0 1 2-2Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2 9h4v12H2V9Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M4 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+            <div class="mt-6 rounded-2xl border border-[color:var(--cb)] bg-[color:var(--bg)]/20 p-5">
+              <p class="text-sm font-medium">Recruiter note</p>
+              <p class="mt-2 text-sm muted leading-relaxed">Actively seeking an entry-level Data Analyst / MIS Executive role. Possesses strong fundamentals in Excel and Power BI, coupled with a structured approach to reporting, KPI tracking, and data-driven insights.</p>
+            </div>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a href="mailto:raih364s@gmail.com" class="btn focus-ring inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium bg-[color:var(--btn)] text-white">Email Me</a>
+              <a href="tel:+916280974688" class="btn focus-ring inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium border border-[color:var(--cb)] bg-[color:var(--card)]">Call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-[color:var(--cb)]">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-sm muted">© <span id="year"></span> Harsh Rai. All rights reserved.</p>
+      <a href="#home" class="text-sm font-medium text-[color:var(--accent)] hover:underline">Back to top</a>
+    </div>
+  </footer>
+
+  <script>
+    const $ = id => document.getElementById(id);
+    const chip = (t, c='chip-card') => `<span class="chip ${c}">${t}</span>`;
+    const dot = t => `<li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-[color:var(--accent)]"></span><span>${t}</span></li>`;
+    const arrowSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-4 w-4 text-[color:var(--accent)]"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h10v10"/><path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7"/></svg>';
+
+    // Nav
+    const dNav = $('desktopNav'), mNav = $('mobileNav');
+    ['Home','About','Skills','Projects','Certifications','Contact'].forEach(n => {
+      const id = n.toLowerCase();
+      dNav.insertAdjacentHTML('beforeend', `<a class="nav-link muted" href="#${id}">${n}</a>`);
+      mNav.insertAdjacentHTML('beforeend', `<a class="px-3 py-2 rounded-xl muted hover:bg-[color:var(--accent2)] transition-colors" href="#${id}">${n}</a>`);
+    });
+
+    // Snapshot
+    $('snapshotList').innerHTML = [
+      'Reporting &amp; Dashboard Development (MIS, KPIs)',
+      'SQL (Basic: JOINS, Subqueries, Aggregate Functions)',
+      'Advanced Excel (Pivot Tables, XLOOKUP, VLOOKUP, Formulas) &amp; Power BI visuals',
+      'Data cleaning + structured, decision-ready reporting'
+    ].map(dot).join('');
+
+    // Profile
+    $('profileCards').innerHTML = [
+      ['Strengths','Data cleaning, KPI analysis, report automation, and stakeholder-friendly dashboards for informed decision-making.'],
+      ['Working Style','Detail-oriented, structured, and focused on decision-ready outputs.'],
+      ['Tooling','Excel, Power BI, SQL (Basic), Python (Basic), IBM Cognos']
+    ].map(([t,d])=>`<div class="inner-card"><p class="text-sm font-medium">${t}</p><p class="mt-1 text-sm muted">${d}</p></div>`).join('');
+
+    // Keywords
+    $('keywords').innerHTML = ['Dashboard Creation','Excel','Power BI','KPI Tracking','Data Cleaning','SQL (Basics)','Python (Basics)','IBM Cognos','MIS Reporting'].map(k=>chip(k)).join('');
+
+    // Skills
+    $('skillsGrid').innerHTML = [
+      ['Core',['MIS Reporting','Dashboard Development','Data Analysis','Data Cleaning','KPI Tracking','Excel Reporting','Data Visualization','AI Tool Assistance']],
+      ['Tools',['Advanced Excel (Pivot Tables, VLOOKUP, XLOOKUP, Formulas)','Power BI','SQL','Python']],
+      ['Soft Skills',['Attention to Detail','Problem Solving','Time Management','Team Collaboration','Effective Communication']]
+    ].map(([title,items])=>`<div class="glass rounded-3xl p-6"><h3 class="text-lg font-semibold">${title}</h3><div class="mt-4 flex flex-wrap gap-2">${items.map(i=>chip(i,'chip-bg')).join('')}</div></div>`).join('');
+
+    // Projects
+    $('projectsGrid').innerHTML = [
+      {title:'Customer Sales &amp; Demographic Analytics Dashboard',tool:'Excel',desc:'An interactive Excel dashboard designed to analyze customer purchasing patterns and demographics, providing insights for targeted marketing and sales strategies.',link:'https://1drv.ms/x/c/88e5d63b20832b83/IQBdp0bkSTqpTqG78xAR-wOyAYnAgSxfkiHxQOIsggBUQRc?e=pxwSoS',mt:'Key Metrics',m:'Analyzed $20.2k revenue across 199 customers, tracking gender mix (54% Male/46% Female), top sales regions (US, IT, AU), and device-specific sales trends to inform strategic planning.',tags:['Pivot Tables','Aggregations','Data Cleaning','Data Visualization']},
+      {title:'Car Sales Analytics Dashboard',tool:'Excel',desc:'A comprehensive Excel dashboard developed to evaluate car sales performance, focusing on unit sales, pricing, and retention to support product strategy and market positioning.',link:'https://onedrive.live.com/:x:/g/personal/88E5D63B20832B83/IQB7wia8S3uYSazi4PBw5H0vAU7qyqvYQP_ToEFZPCQHvm0?resid=88E5D63B20832B83!sbc26c27b7b4b4998ace2e0f070e47d2f&ithint=file%2Cxlsx&e=Fnvzno&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3gvYy84OGU1ZDYzYjIwODMyYjgzL0lRQjd3aWE4UzN1WVNhemk0UEJ3NUgwdkFVN3F5cXZZUVBfVG9FRlpQQ1FIdm0wP2U9Rm52em5v',mt:'Key Insights',m:'Analyzed 8.25M+ unit sales across 155 car models, comparing average price against resale value, identifying retention trends (e.g., Ford led with 2.02M units), and differentiating performance between passenger and car vehicle types for strategic decision-making.',tags:['KPI Derivation','Visualization','Data Cleaning','Performance Analysis']}
+    ].map(p=>`<article class="glass rounded-3xl p-6"><div class="flex items-start justify-between gap-3"><h3 class="text-lg sm:text-xl font-semibold">${p.title}</h3><span class="chip chip-bg">${p.tool}</span></div><p class="mt-3 muted text-sm leading-relaxed">${p.desc}</p><a href="${p.link}" target="_blank" class="mt-3 inline-flex items-center gap-2 text-sm font-medium text-[color:var(--accent)] hover:underline">View project →</a><div class="mt-5 grid gap-3"><div class="inner-card"><p class="text-sm font-medium">${p.mt}</p><p class="mt-1 text-sm muted">${p.m}</p></div><div class="flex flex-wrap gap-2">${p.tags.map(t=>chip(t,'chip-accent')).join('')}</div></div></article>`).join('');
+
+    // Certs
+    $('certsGrid').innerHTML = [
+      {title:'IBM (Professional Certificate Track)',sub:'Focused learning path',link:'https://harshrai364.github.io/IBM_data_analytic_certificates_harsh_rai/',items:['IBM Data Analyst Professional Certificate','Database and SQL for Data Science with Python','Data Analysis with Python','Data Visualization and Dashboards with Excel and Cognos','Data Visualization with Python','Python for Data Analytics and Development','Excel Basics for Data Analysis','Introduction to Data Analytics']},
+      {title:'Additional Certifications',sub:'Tools + productivity + design',link:'#',items:['Data Visualization with Power BI','Data Analysis Using Excel','Microsoft Office 365 Specialist','Certificate in Computer Application','Corel Draw &amp; Graphic Designing','SQL Basic Certificate (HackerRank)','SQL Basic Certificate (HackerRank)']}
+    ].map(c=>`<div class="rounded-3xl border border-[color:var(--cb)] bg-[color:var(--bg)]/20 p-6"><div class="flex items-start justify-between gap-4"><div><p class="text-sm font-semibold">${c.title}</p><p class="mt-1 text-xs muted">${c.sub}</p></div><a href="${c.link}" class="ico-btn" target="_blank" rel="noopener noreferrer" aria-label="View ${c.title}">${arrowSvg}</a></div><ul class="mt-5 flex flex-wrap gap-2">${c.items.map(i=>`<li class="chip chip-card">${i}</li>`).join('')}</ul></div>`).join('');
+
+    // Mobile menu
+    const mBtn = $('mobileMenuBtn'), mMenu = $('mobileMenu');
+    mBtn.addEventListener('click', () => {
+      const open = mMenu.classList.toggle('hidden');
+      mBtn.setAttribute('aria-expanded', String(!open));
+    });
+    mMenu.addEventListener('click', e => {
+      if (e.target.closest('a[href^="#"]')) {
+        mMenu.classList.add('hidden');
+        mBtn.setAttribute('aria-expanded','false');
+      }
+    });
+
+    // Active nav — throttled with rAF, no IntersectionObserver overhead
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = dNav.querySelectorAll('a.nav-link');
+    let coords = [], raf = 0, lastActive = '';
+
+    const cacheCoords = () => {
+      coords = [];
+      sections.forEach(s => coords.push({ id: s.id, top: s.offsetTop, bot: s.offsetTop + s.offsetHeight }));
+    };
+
+    const tick = () => {
+      raf = 0;
+      const y = window.scrollY + 76;
+      let best = coords[0]?.id || '', bestD = 1e9;
+      for (const s of coords) {
+        const inside = y >= s.top && y <= s.bot;
+        const d = inside ? -1e5 : Math.abs(s.top - y);
+        if (d < bestD) { bestD = d; best = s.id; }
+      }
+      if (best && best !== lastActive) {
+        lastActive = best;
+        navLinks.forEach(a => a.setAttribute('aria-current', a.hash === '#' + best ? 'true' : 'false'));
+      }
+    };
+
+    window.addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(tick); }, { passive: true });
+    window.addEventListener('resize', () => { cacheCoords(); if (!raf) raf = requestAnimationFrame(tick); }, { passive: true });
+    document.addEventListener('click', e => {
+      const a = e.target.closest('a[href^="#"]');
+      if (a) { const id = a.hash?.slice(1); if (id) { lastActive = id; navLinks.forEach(l => l.setAttribute('aria-current', l.hash === '#' + id ? 'true' : 'false')); } }
+    });
+
+    cacheCoords();
+    tick();
+
+    $('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
